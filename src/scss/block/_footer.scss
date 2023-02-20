@@ -1,0 +1,109 @@
+.footer {
+   background-image: url("../image/footer/layer_footer.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   &__pricing-title {
+      text-align: center;
+      color: $mainColor;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 42px;
+      margin-bottom: 32px;
+      padding-top: 14px;
+
+   }
+
+   &__pricing-list {
+      @include flexColumn;
+   }
+
+   &__pricing-list-item {
+      @include flexColumn;
+      background-color: #5f5161;
+      margin-bottom: 18px;
+   }
+
+   &__pricing-name {
+      color: $mainColor;
+      background-color: rgba(255, 255, 255, .11);
+      text-transform: uppercase;
+      padding: 36px 63px;
+      font-size: 24px;
+      line-height: 24px;
+
+      &--prof {
+         padding: 36px 32px;
+      }
+
+      &--agensy {
+         padding: 36px 97px;
+         background-color: rgba(0, 0, 0, .11);
+      }
+
+      &--enterprise {
+         padding: 36px 51px;
+      }
+   }
+
+   &__pricing-cost {
+
+      color: $mainColor;
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 62px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+
+      &::before {
+         content: '$';
+         font-weight: 400;
+         margin-right: -15px;
+      }
+   }
+
+   &__pricing-per-month {
+
+      color: $mainColor;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+
+
+      &::after {
+         content: "";
+         display: block;
+         width: 60px;
+         height: 5px;
+         background-color: $secondColor;
+         margin-bottom: 30px;
+         margin-top: 38px;
+         margin-left: 99px;
+         margin-right: 99px;
+
+      }
+   }
+
+   &__plan-benefits {
+      color: $mainColor;
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 37px;
+
+   }
+
+
+
+   &__purchase {
+      color: $mainColor;
+      font-size: 15px;
+      line-height: 15px;
+      padding: 15px 38px;
+      background-color: rgba(255, 255, 255, .11);
+      border-radius: 40px;
+      margin-bottom: 67px;
+   }
+
+
+
+}
