@@ -60,6 +60,7 @@ a {
 }
 
 .footer {
+  background-image: url("../image/footer/layer_footer.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -70,23 +71,82 @@ a {
   font-size: 28px;
   line-height: 42px;
   margin-bottom: 32px;
+  padding-top: 14px;
+}
+.footer__pricing-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__pricing-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #5f5161;
+  margin-bottom: 18px;
 }
 .footer__pricing-name {
   color: #FFFFFF;
-  text-align: center;
-  padding: 36px 60px;
+  background-color: rgba(255, 255, 255, 0.11);
+  text-transform: uppercase;
+  padding: 36px 63px;
   font-size: 24px;
   line-height: 24px;
 }
-.footer__pricing-list-item {
-  background-color: #5f5161;
+.footer__pricing-name--prof {
+  padding: 36px 32px;
+}
+.footer__pricing-name--agensy {
+  padding: 36px 97px;
+  background-color: rgba(0, 0, 0, 0.11);
+}
+.footer__pricing-name--enterprise {
+  padding: 36px 51px;
+}
+.footer__pricing-cost {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 62px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.footer__pricing-cost::before {
+  content: "$";
+  font-weight: 400;
+  margin-right: -15px;
+}
+.footer__pricing-per-month {
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+.footer__pricing-per-month::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 5px;
+  background-color: #8D81AC;
+  margin-bottom: 30px;
+  margin-top: 38px;
+  margin-left: 99px;
+  margin-right: 99px;
+}
+.footer__plan-benefits {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 37px;
 }
 .footer__purchase {
-  display: block;
   color: #FFFFFF;
   font-size: 15px;
   line-height: 15px;
   padding: 15px 38px;
-  margin-top: 37px;
   background-color: rgba(255, 255, 255, 0.11);
+  border-radius: 40px;
+  margin-bottom: 67px;
 }

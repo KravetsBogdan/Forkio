@@ -1,13 +1,13 @@
 $grid-breakpoints: (
-        xxs: 360px,
-        xs: 568px,
-        sm: 640px,
-        md: 769px,
-        my: 1024px,
-        lg: 1110px,
-        xl: 1200px,
-        xxl: 1440px,
-        xxxl: 1920px
+  xxs: 360px,
+  xs: 568px,
+  sm: 640px,
+  md: 769px,
+  my: 1024px,
+  lg: 1110px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1920px
 );
 
 @mixin breakpoint($size, $rule: max-width) {
@@ -29,4 +29,11 @@ $grid-breakpoints: (
   @media (min-width: $min) and (max-width: $max) {
     @content;
   }
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
