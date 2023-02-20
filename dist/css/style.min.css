@@ -88,25 +88,22 @@ a {
   margin-bottom: 18px;
 }
 .footer__pricing-list-item--agency {
-  background-color: #463048;
+  background-color: rgba(70, 48, 72, 0.84);
 }
 .footer__pricing-name {
+  width: 100%;
+  text-align: center;
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.11);
   text-transform: uppercase;
-  padding: 36px 63px;
+  padding-top: 36px;
+  padding-bottom: 36px;
   font-size: 24px;
   line-height: 24px;
 }
-.footer__pricing-name--prof {
-  padding: 36px 32px;
-}
 .footer__pricing-name--agency {
-  padding: 36px 97px;
+  width: 300px;
   background-color: rgba(0, 0, 0, 0.11);
-}
-.footer__pricing-name--enterprise {
-  padding: 36px 51px;
 }
 .footer__pricing-cost, .footer__pricing-cost--agency {
   color: #FFFFFF;
@@ -119,6 +116,8 @@ a {
 .footer__pricing-cost--agency {
   font-size: 82px;
   line-height: 84px;
+  margin-top: 14px;
+  margin-bottom: 16px;
 }
 .footer__pricing-cost::before, .footer__pricing-cost--agency::before {
   content: "$";
@@ -142,7 +141,11 @@ a {
   margin-left: 99px;
   margin-right: 99px;
 }
-.footer__plan-benefits, .footer__plan-benefits--enterprice, .footer__plan-benefits--agency, .footer__plan-benefits--prof {
+.footer .footer__pricing-per-month--agency::after {
+  margin-top: 46px;
+  margin-bottom: 40px;
+}
+.footer__plan-benefits, .footer__plan-benefits--enterprice, .footer__plan-benefits--agency, .footer__plan-benefits--prof, .footer__plan-benefits--students {
   color: #FFFFFF;
   font-size: 16px;
   line-height: 18px;
@@ -157,6 +160,7 @@ a {
 }
 .footer__plan-benefits--enterprice {
   line-height: 28px;
+  margin-bottom: 39px;
 }
 .footer__purchase, .footer__purchase--enterprice, .footer__purchase--agency, .footer__purchase--prof {
   color: #FFFFFF;
@@ -185,5 +189,30 @@ a {
     flex-wrap: wrap;
     column-gap: 25px;
     margin: 0 auto;
+    max-width: 700px;
+  }
+  .footer__pricing-list-item, .footer__pricing-list-item--agency {
+    max-width: 218px;
+  }
+  .footer__plan-benefits--students {
+    margin-bottom: 68px;
+  }
+  .footer__plan-benefits--agency {
+    margin-bottom: 83px;
+  }
+  .footer__purchase, .footer__purchase--prof, .footer__purchase--agency, .footer__purchase--enterprice {
+    margin-bottom: 36px;
+  }
+}
+@media (min-width: 993px) {
+  .footer__pricing-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .footer__pricing-list-item, .footer__pricing-list-item--agency {
+    max-width: 224px;
   }
 }

@@ -30,24 +30,20 @@
    }
 
    &__pricing-name {
+      width: 100%;
+      text-align: center;
       color: $mainColor;
       background-color: rgba(255, 255, 255, .11);
       text-transform: uppercase;
-      padding: 36px 63px;
+      padding-top: 36px;
+      padding-bottom: 36px;
       font-size: 24px;
       line-height: 24px;
 
-      &--prof {
-         padding: 36px 32px;
-      }
-
       &--agency {
-         padding: 36px 97px;
-         background-color: rgba(0, 0, 0, .11);
-      }
+         width: 300px;
+         background-color: $cardActiveBack;
 
-      &--enterprise {
-         padding: 36px 51px;
       }
    }
 
@@ -64,6 +60,8 @@
          @extend .footer__pricing-cost;
          font-size: 82px;
          line-height: 84px;
+         margin-top: 14px;
+         margin-bottom: 16px;
       }
 
       &::before {
@@ -80,7 +78,6 @@
       line-height: 16px;
       text-align: center;
 
-
       &::after {
          content: "";
          display: block;
@@ -91,8 +88,13 @@
          margin-top: 38px;
          margin-left: 99px;
          margin-right: 99px;
-
       }
+
+   }
+
+   .footer__pricing-per-month--agency::after {
+      margin-top: 46px;
+      margin-bottom: 40px;
    }
 
    &__plan-benefits {
@@ -101,6 +103,11 @@
       line-height: 18px;
       margin-bottom: 37px;
       text-align: center;
+
+      &--students {
+         @extend .footer__plan-benefits;
+
+      }
 
       &--prof {
          @extend .footer__plan-benefits;
@@ -115,6 +122,7 @@
       &--enterprice {
          @extend .footer__plan-benefits;
          line-height: 28px;
+         margin-bottom: 39px;
       }
    }
 
@@ -148,6 +156,7 @@
    }
 }
 
+
 @media (min-width:481px) {
    .footer {
       &__pricing-list {
@@ -155,9 +164,48 @@
          flex-wrap: wrap;
          column-gap: 25px;
          margin: 0 auto;
+         max-width: 700px;
+      }
+
+      &__pricing-list-item {
+         max-width: 218px;
+      }
+
+      &__plan-benefits {
+         &--students {
+            margin-bottom: 68px;
+         }
+
+         &--agency {
+            margin-bottom: 83px;
+         }
+
+         &--enterprice {}
+
+      }
+
+      &__purchase {
+         margin-bottom: 36px;
       }
 
 
+
+   }
+}
+
+@media (min-width:993px) {
+   .footer {
+      &__pricing-list {
+         flex-direction: row;
+         flex-wrap: wrap;
+         column-gap: 25px;
+         margin: 0 auto;
+         max-width: 100%;
+      }
+
+      &__pricing-list-item {
+         max-width: 224px;
+      }
 
    }
 }
