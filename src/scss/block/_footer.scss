@@ -22,6 +22,11 @@
       @include flexColumn;
       background-color: #5f5161;
       margin-bottom: 18px;
+
+      &--agency {
+         @extend .footer__pricing-list-item;
+         background-color: $cardActive;
+      }
    }
 
    &__pricing-name {
@@ -36,7 +41,7 @@
          padding: 36px 32px;
       }
 
-      &--agensy {
+      &--agency {
          padding: 36px 97px;
          background-color: rgba(0, 0, 0, .11);
       }
@@ -54,6 +59,12 @@
       line-height: 62px;
       margin-top: 30px;
       margin-bottom: 20px;
+
+      &--agency {
+         @extend .footer__pricing-cost;
+         font-size: 82px;
+         line-height: 84px;
+      }
 
       &::before {
          content: '$';
@@ -89,7 +100,22 @@
       font-size: 16px;
       line-height: 18px;
       margin-bottom: 37px;
+      text-align: center;
 
+      &--prof {
+         @extend .footer__plan-benefits;
+         line-height: 28px;
+      }
+
+      &--agency {
+         @extend .footer__plan-benefits;
+         line-height: 32px;
+      }
+
+      &--enterprice {
+         @extend .footer__plan-benefits;
+         line-height: 28px;
+      }
    }
 
 
@@ -102,8 +128,36 @@
       background-color: rgba(255, 255, 255, .11);
       border-radius: 40px;
       margin-bottom: 67px;
+
+      &--prof {
+         @extend .footer__purchase;
+         margin-bottom: 36px;
+      }
+
+      &--agency {
+         @extend .footer__purchase;
+         margin-bottom: 47px;
+         font-size: 16px;
+         line-height: 18px;
+      }
+
+      &--enterprice {
+         @extend .footer__purchase;
+         margin-bottom: 39px;
+      }
    }
+}
+
+@media (min-width:481px) {
+   .footer {
+      &__pricing-list {
+         flex-direction: row;
+         flex-wrap: wrap;
+         column-gap: 25px;
+         margin: 0 auto;
+      }
 
 
 
+   }
 }

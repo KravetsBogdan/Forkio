@@ -46,7 +46,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -79,13 +79,16 @@ a {
   align-items: center;
   justify-content: center;
 }
-.footer__pricing-list-item {
+.footer__pricing-list-item, .footer__pricing-list-item--agency {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #5f5161;
   margin-bottom: 18px;
+}
+.footer__pricing-list-item--agency {
+  background-color: #463048;
 }
 .footer__pricing-name {
   color: #FFFFFF;
@@ -98,14 +101,14 @@ a {
 .footer__pricing-name--prof {
   padding: 36px 32px;
 }
-.footer__pricing-name--agensy {
+.footer__pricing-name--agency {
   padding: 36px 97px;
   background-color: rgba(0, 0, 0, 0.11);
 }
 .footer__pricing-name--enterprise {
   padding: 36px 51px;
 }
-.footer__pricing-cost {
+.footer__pricing-cost, .footer__pricing-cost--agency {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 60px;
@@ -113,7 +116,11 @@ a {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-.footer__pricing-cost::before {
+.footer__pricing-cost--agency {
+  font-size: 82px;
+  line-height: 84px;
+}
+.footer__pricing-cost::before, .footer__pricing-cost--agency::before {
   content: "$";
   font-weight: 400;
   margin-right: -15px;
@@ -135,13 +142,23 @@ a {
   margin-left: 99px;
   margin-right: 99px;
 }
-.footer__plan-benefits {
+.footer__plan-benefits, .footer__plan-benefits--enterprice, .footer__plan-benefits--agency, .footer__plan-benefits--prof {
   color: #FFFFFF;
   font-size: 16px;
   line-height: 18px;
   margin-bottom: 37px;
+  text-align: center;
 }
-.footer__purchase {
+.footer__plan-benefits--prof {
+  line-height: 28px;
+}
+.footer__plan-benefits--agency {
+  line-height: 32px;
+}
+.footer__plan-benefits--enterprice {
+  line-height: 28px;
+}
+.footer__purchase, .footer__purchase--enterprice, .footer__purchase--agency, .footer__purchase--prof {
   color: #FFFFFF;
   font-size: 15px;
   line-height: 15px;
@@ -149,4 +166,24 @@ a {
   background-color: rgba(255, 255, 255, 0.11);
   border-radius: 40px;
   margin-bottom: 67px;
+}
+.footer__purchase--prof {
+  margin-bottom: 36px;
+}
+.footer__purchase--agency {
+  margin-bottom: 47px;
+  font-size: 16px;
+  line-height: 18px;
+}
+.footer__purchase--enterprice {
+  margin-bottom: 39px;
+}
+
+@media (min-width: 481px) {
+  .footer__pricing-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    margin: 0 auto;
+  }
 }
