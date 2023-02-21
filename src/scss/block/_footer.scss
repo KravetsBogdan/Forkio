@@ -26,6 +26,7 @@
       &--agency {
          @extend .footer__pricing-list-item;
          background-color: $cardActive;
+         width: 300px;
       }
    }
 
@@ -41,7 +42,7 @@
       line-height: 24px;
 
       &--agency {
-         width: 300px;
+
          background-color: $cardActiveBack;
 
       }
@@ -158,17 +159,30 @@
 
 
 @media (min-width:481px) {
+   .footer__pricing-title {
+      margin-bottom: 39px;
+   }
+
    .footer {
       &__pricing-list {
          flex-direction: row;
          flex-wrap: wrap;
          column-gap: 25px;
          margin: 0 auto;
-         max-width: 700px;
+         max-width: 480px;
+         padding-bottom: 64px;
       }
 
       &__pricing-list-item {
-         max-width: 218px;
+         max-width: 205px;
+         margin-bottom: 30px;
+
+         &--agency {
+            min-width: 230px;
+            flex: 1 1 50;
+
+
+         }
       }
 
       &__plan-benefits {
@@ -180,7 +194,13 @@
             margin-bottom: 83px;
          }
 
-         &--enterprice {}
+         &--prof {
+            margin-bottom: 30px;
+         }
+
+         &--enterprice {
+            margin-bottom: 30px;
+         }
 
       }
 
@@ -194,6 +214,10 @@
 }
 
 @media (min-width:993px) {
+   .footer__pricing-title {
+      margin-bottom: 61px;
+   }
+
    .footer {
       &__pricing-list {
          flex-direction: row;
@@ -201,10 +225,40 @@
          column-gap: 25px;
          margin: 0 auto;
          max-width: 100%;
+         gap: 15px;
+         padding-bottom: 54px;
+
       }
 
       &__pricing-list-item {
-         max-width: 224px;
+         max-width: 220px;
+
+         &--agency {
+            min-width: 255px;
+
+         }
+      }
+
+   }
+}
+
+@media (min-width:1200px) {
+   .footer {
+      &__pricing-list {
+         flex-direction: row;
+         flex-wrap: wrap;
+         column-gap: 25px;
+         margin: 0 auto;
+         width: 1200px;
+      }
+
+      &__pricing-list-item {
+         min-width: 258px;
+
+         &--agency {
+            min-width: 300px;
+
+         }
       }
 
    }

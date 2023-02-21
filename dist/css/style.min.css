@@ -89,6 +89,7 @@ a {
 }
 .footer__pricing-list-item--agency {
   background-color: rgba(70, 48, 72, 0.84);
+  width: 300px;
 }
 .footer__pricing-name {
   width: 100%;
@@ -102,7 +103,6 @@ a {
   line-height: 24px;
 }
 .footer__pricing-name--agency {
-  width: 300px;
   background-color: rgba(0, 0, 0, 0.11);
 }
 .footer__pricing-cost, .footer__pricing-cost--agency {
@@ -184,15 +184,24 @@ a {
 }
 
 @media (min-width: 481px) {
+  .footer__pricing-title {
+    margin-bottom: 39px;
+  }
   .footer__pricing-list {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 25px;
     margin: 0 auto;
-    max-width: 700px;
+    max-width: 480px;
+    padding-bottom: 64px;
   }
   .footer__pricing-list-item, .footer__pricing-list-item--agency {
-    max-width: 218px;
+    max-width: 205px;
+    margin-bottom: 30px;
+  }
+  .footer__pricing-list-item--agency {
+    min-width: 230px;
+    flex: 1 1 50;
   }
   .footer__plan-benefits--students {
     margin-bottom: 68px;
@@ -200,19 +209,48 @@ a {
   .footer__plan-benefits--agency {
     margin-bottom: 83px;
   }
+  .footer__plan-benefits--prof {
+    margin-bottom: 30px;
+  }
+  .footer__plan-benefits--enterprice {
+    margin-bottom: 30px;
+  }
   .footer__purchase, .footer__purchase--prof, .footer__purchase--agency, .footer__purchase--enterprice {
     margin-bottom: 36px;
   }
 }
 @media (min-width: 993px) {
+  .footer__pricing-title {
+    margin-bottom: 61px;
+  }
   .footer__pricing-list {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 25px;
     margin: 0 auto;
     max-width: 100%;
+    gap: 15px;
+    padding-bottom: 54px;
   }
   .footer__pricing-list-item, .footer__pricing-list-item--agency {
-    max-width: 224px;
+    max-width: 220px;
+  }
+  .footer__pricing-list-item--agency {
+    min-width: 255px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__pricing-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    margin: 0 auto;
+    width: 1200px;
+  }
+  .footer__pricing-list-item, .footer__pricing-list-item--agency {
+    min-width: 258px;
+  }
+  .footer__pricing-list-item--agency {
+    min-width: 300px;
   }
 }
