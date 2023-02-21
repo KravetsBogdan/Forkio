@@ -1,0 +1,94 @@
+.get-section {
+
+   &__title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+      color: $secondColor;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-bottom: 36px;
+
+      &::after {
+         content: ">";
+         margin-left: -7px;
+      }
+
+      &::before {
+         content: "<";
+         margin-right: -7px;
+      }
+   }
+
+   &__list {
+      @include flexColumn;
+      position: relative;
+   }
+
+   &__list-item {
+      @include flexColumn;
+
+   }
+
+   &__list-image {
+      &--web {
+         margin-right: -35px;
+         margin-bottom: 27px;
+      }
+
+      &--powerfull {
+         margin-bottom: 21px;
+      }
+
+      &--experiment {
+         margin-bottom: 20px;
+
+      }
+
+      &--webBetter {
+         margin-bottom: 23px;
+
+      }
+
+   }
+
+   &__list-title {
+      color: $mainTitle;
+      font-size: 16px;
+      line-height: 16px;
+      text-align: center;
+      font-weight: 400;
+      margin-bottom: 14px;
+   }
+
+   &__list-description {
+      color: $mainText;
+      text-align: center;
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      max-width: 270px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+
+      &--last {
+         @extend .get-section__list-description;
+         margin-bottom: 64px;
+      }
+   }
+
+   .test {
+      position: relative;
+      width: 100%;
+      height: 381px;
+   }
+
+   &__example-photo {
+      position: absolute;
+      right: -10px;
+   }
+
+}
