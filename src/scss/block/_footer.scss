@@ -22,27 +22,29 @@
       @include flexColumn;
       background-color: #5f5161;
       margin-bottom: 18px;
+
+      &--agency {
+         @extend .footer__pricing-list-item;
+         background-color: $cardActive;
+         width: 300px;
+      }
    }
 
    &__pricing-name {
+      width: 100%;
+      text-align: center;
       color: $mainColor;
       background-color: rgba(255, 255, 255, .11);
       text-transform: uppercase;
-      padding: 36px 63px;
+      padding-top: 36px;
+      padding-bottom: 36px;
       font-size: 24px;
       line-height: 24px;
 
-      &--prof {
-         padding: 36px 32px;
-      }
+      &--agency {
 
-      &--agensy {
-         padding: 36px 97px;
-         background-color: rgba(0, 0, 0, .11);
-      }
+         background-color: $cardActiveBack;
 
-      &--enterprise {
-         padding: 36px 51px;
       }
    }
 
@@ -54,6 +56,14 @@
       line-height: 62px;
       margin-top: 30px;
       margin-bottom: 20px;
+
+      &--agency {
+         @extend .footer__pricing-cost;
+         font-size: 82px;
+         line-height: 84px;
+         margin-top: 14px;
+         margin-bottom: 16px;
+      }
 
       &::before {
          content: '$';
@@ -69,7 +79,6 @@
       line-height: 16px;
       text-align: center;
 
-
       &::after {
          content: "";
          display: block;
@@ -80,8 +89,13 @@
          margin-top: 38px;
          margin-left: 99px;
          margin-right: 99px;
-
       }
+
+   }
+
+   .footer__pricing-per-month--agency::after {
+      margin-top: 46px;
+      margin-bottom: 40px;
    }
 
    &__plan-benefits {
@@ -89,7 +103,28 @@
       font-size: 16px;
       line-height: 18px;
       margin-bottom: 37px;
+      text-align: center;
 
+      &--students {
+         @extend .footer__plan-benefits;
+
+      }
+
+      &--prof {
+         @extend .footer__plan-benefits;
+         line-height: 28px;
+      }
+
+      &--agency {
+         @extend .footer__plan-benefits;
+         line-height: 32px;
+      }
+
+      &--enterprice {
+         @extend .footer__plan-benefits;
+         line-height: 28px;
+         margin-bottom: 39px;
+      }
    }
 
 
@@ -102,8 +137,130 @@
       background-color: rgba(255, 255, 255, .11);
       border-radius: 40px;
       margin-bottom: 67px;
+
+      &--prof {
+         @extend .footer__purchase;
+         margin-bottom: 36px;
+      }
+
+      &--agency {
+         @extend .footer__purchase;
+         margin-bottom: 47px;
+         font-size: 16px;
+         line-height: 18px;
+      }
+
+      &--enterprice {
+         @extend .footer__purchase;
+         margin-bottom: 39px;
+      }
+   }
+}
+
+
+@media (min-width:481px) {
+   .footer__pricing-title {
+      margin-bottom: 39px;
    }
 
+   .footer {
+      &__pricing-list {
+         flex-direction: row;
+         flex-wrap: wrap;
+         column-gap: 25px;
+         margin: 0 auto;
+         max-width: 480px;
+         padding-bottom: 64px;
+      }
+
+      &__pricing-list-item {
+         max-width: 205px;
+         margin-bottom: 30px;
+
+         &--agency {
+            min-width: 230px;
+            margin-left: -25px;
 
 
+         }
+      }
+
+      &__plan-benefits {
+         &--students {
+            margin-bottom: 68px;
+         }
+
+         &--agency {
+            margin-bottom: 83px;
+         }
+
+         &--prof {
+            margin-bottom: 30px;
+         }
+
+         &--enterprice {
+            margin-bottom: 30px;
+         }
+
+      }
+
+      &__purchase {
+         margin-bottom: 36px;
+      }
+
+
+
+   }
+}
+
+@media (min-width:993px) {
+   .footer__pricing-title {
+      margin-bottom: 61px;
+   }
+
+   .footer {
+      &__pricing-list {
+         flex-direction: row;
+         flex-wrap: wrap;
+         column-gap: 25px;
+         margin: 0 auto;
+         max-width: 100%;
+         gap: 15px;
+         padding-bottom: 54px;
+
+      }
+
+      &__pricing-list-item {
+         max-width: 220px;
+
+         &--agency {
+            min-width: 255px;
+            margin-left: 0;
+
+         }
+      }
+
+   }
+}
+
+@media (min-width:1200px) {
+   .footer {
+      &__pricing-list {
+         flex-direction: row;
+         flex-wrap: wrap;
+         column-gap: 25px;
+         margin: 0 auto;
+         width: 1200px;
+      }
+
+      &__pricing-list-item {
+         min-width: 258px;
+
+         &--agency {
+            min-width: 300px;
+
+         }
+      }
+
+   }
 }
