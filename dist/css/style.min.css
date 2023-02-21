@@ -68,6 +68,7 @@ a {
   max-width: 300px;
   margin: 0 auto;
   margin-bottom: 36px;
+  margin-top: 32px;
 }
 .get-section__title::after {
   content: ">";
@@ -126,16 +127,51 @@ a {
 .get-section__list-description--last {
   margin-bottom: 64px;
 }
-.get-section .test {
-  position: relative;
-  width: 100%;
-  height: 381px;
+.get-section__example-photo-wrap {
+  display: flex;
+  justify-content: flex-end;
 }
 .get-section__example-photo {
-  position: absolute;
-  right: -10px;
+  margin-bottom: 6px;
+}
+.get-section__example-photo-desktop {
+  display: none;
 }
 
+@media (min-width: 481px) {
+  .get-section__title {
+    max-width: 100%;
+  }
+  .get-section__list-item {
+    flex-direction: row;
+    width: 100%;
+  }
+  .get-section__list-image--web {
+    margin-right: 24px;
+  }
+  .get-section__list-image--powerfull {
+    margin-right: 43px;
+  }
+  .get-section__list-image--experiment {
+    margin-right: 58px;
+  }
+  .get-section__list-image--webBetter {
+    margin-right: 52px;
+  }
+  .get-section__list-title {
+    line-height: 21px;
+  }
+  .get-section__list-description, .get-section__list-description--last {
+    max-width: 100%;
+    text-align: left;
+  }
+  .get-section__example-photo {
+    display: none;
+  }
+  .get-section__example-photo-desktop {
+    display: block;
+  }
+}
 .footer {
   background-image: url("../image/footer/layer_footer.png");
   background-size: cover;
