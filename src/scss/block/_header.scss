@@ -38,6 +38,10 @@
         line-height: 16px;
         margin-left: 17px;
 
+        &:hover {
+            color: $mainColor;
+        }
+
         @include breakpoint-mf('md') {
             display: block;
         }
@@ -62,14 +66,34 @@
     }
 
     &__nav-link {
+        position: relative;
         color: $mainColor;
         font-weight: 400;
         font-size: 26px;
         line-height: 26px;
 
-        &::after {
+        &:hover::after {
+            // position: absolute;
+            // content: ('|');
+            // left: 0;
+            /* active */
+
+            // position: absolute;
+            // content: '';
+            // width: 8px;
+            // height: 53px;
+            // left: 3px;
+            // top: 19px;
+
+            // background: #8D81AC;
+
+            // color: $secondColor;
+
             position: absolute;
             content: '';
+            top: calc(50% - 8px);
+            left: -55px;
+            transform: rotate(90deg);
             width: 53px;
             height: 8px;
             background-color: $secondColor;
@@ -91,6 +115,11 @@
         background-color: $secondColor;
         padding: 11px 10px;
         width: 119px;
+
+        &:hover {
+            background-color: $mainColor;
+            color: $secondColor;
+        }
     }
 
     &__nav-btn {

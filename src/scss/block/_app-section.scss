@@ -1,0 +1,33 @@
+.app-section {
+    background-image: url('../image/appSection/bg-mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 800px;
+    padding: 50px 0 416px;
+    text-align: center;
+
+
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        color: $mainColor;
+        margin-bottom: 19px;
+    }
+
+    &__title-description {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: $secondColor;
+        margin-bottom: 14px;
+    }
+
+    &__pseudo-title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        color: $mainText;
+    }
+}

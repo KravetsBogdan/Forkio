@@ -93,6 +93,9 @@ a {
   line-height: 16px;
   margin-left: 17px;
 }
+.header__text-logo:hover {
+  color: #FFFFFF;
+}
 @media (min-width: 768px) {
   .header__text-logo {
     display: block;
@@ -114,14 +117,19 @@ a {
   padding: 29px 0 21px 35px;
 }
 .header__nav-link {
+  position: relative;
   color: #FFFFFF;
   font-weight: 400;
   font-size: 26px;
   line-height: 26px;
 }
-.header__nav-link::after {
+.header__nav-link:hover::after {
+  /* active */
   position: absolute;
   content: "";
+  top: calc(50% - 8px);
+  left: -55px;
+  transform: rotate(90deg);
   width: 53px;
   height: 8px;
   background-color: #8D81AC;
@@ -140,6 +148,10 @@ a {
   background-color: #8D81AC;
   padding: 11px 10px;
   width: 119px;
+}
+.header__btn:hover {
+  background-color: #FFFFFF;
+  color: #8D81AC;
 }
 .header__nav-btn {
   border: none;
@@ -182,6 +194,36 @@ a {
 .header__nav-line--active::before {
   display: none;
   transition: all ease-in-out 0.3s;
+}
+
+.app-section {
+  background-image: url("../image/appSection/bg-mobile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 800px;
+  padding: 50px 0 416px;
+  text-align: center;
+}
+.app-section__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  color: #FFFFFF;
+  margin-bottom: 19px;
+}
+.app-section__title-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #8D81AC;
+  margin-bottom: 14px;
+}
+.app-section__pseudo-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #848E97;
 }
 
 .footer {
