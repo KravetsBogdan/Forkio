@@ -179,7 +179,7 @@
 
          &--agency {
             min-width: 230px;
-            flex: 1 1 50;
+            margin-left: -25px;
 
 
          }
@@ -235,6 +235,7 @@
 
          &--agency {
             min-width: 255px;
+            margin-left: 0;
 
          }
       }

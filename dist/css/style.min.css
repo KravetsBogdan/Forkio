@@ -201,7 +201,7 @@ a {
   }
   .footer__pricing-list-item--agency {
     min-width: 230px;
-    flex: 1 1 50;
+    margin-left: -25px;
   }
   .footer__plan-benefits--students {
     margin-bottom: 68px;
@@ -237,6 +237,7 @@ a {
   }
   .footer__pricing-list-item--agency {
     min-width: 255px;
+    margin-left: 0;
   }
 }
 @media (min-width: 1200px) {
