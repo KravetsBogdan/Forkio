@@ -1,14 +1,14 @@
 .app-section {
-    background-image: url('../image/appSection/bg-mobile.png');
+    background-image: url('../image/appSection/bg-laptop.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 800px;
-    padding: 50px 0 416px;
     text-align: center;
 
 
     &__title {
+        padding-top: 50px;
         font-weight: 700;
         font-size: 48px;
         line-height: 48px;

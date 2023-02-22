@@ -1,6 +1,17 @@
 .header {
     background-color: $bgHeaderTell;
     padding: 32px 0 30px;
+    margin-bottom: -1px;
+
+    @include breakpoint-mf('xm') {
+        padding: 22px 0 18px;
+    }
+
+    @include breakpoint-mf('ms') {
+        background-color: $headerCardActive;
+        padding: 30px 0;
+    }
+
 
     &__container-flex {
         display: flex;
@@ -10,6 +21,23 @@
     }
 
     &__logo-link {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @include breakpoint-mf ('ms') {
+            flex: auto;
+        }
+
+        &:hover>.header__text-logo {
+            color: $mainColor;
+        }
+
+        &:hover>.header__logo--active {
+            opacity: 1;
+            // display: block;
+        }
+
         @include breakpoint-mf ('md') {
             display: flex;
             flex-wrap: wrap;
@@ -20,12 +48,9 @@
     &__logo {
         &--active {
             opacity: 0;
+            // display: none;
             position: absolute;
             top: 32px;
-
-            &:hover {
-                opacity: 1;
-            }
         }
     }
 
@@ -38,17 +63,25 @@
         line-height: 16px;
         margin-left: 17px;
 
-        &:hover {
-            color: $mainColor;
-        }
-
-        @include breakpoint-mf('md') {
+        @include breakpoint-mf('xm') {
             display: block;
+        }
+    }
+
+    &__nav {
+        @include breakpoint-mf ('xm') {
+            margin: 0 auto;
         }
     }
 
     &__nav-list {
         display: none;
+
+        @include breakpoint-mf('xm') {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
         &--active {
             display: block;
@@ -60,53 +93,81 @@
     }
 
     &__nav-item {
+        position: relative;
         background-color: $bgNavItem;
         border-bottom: 3px solid $bgNavBorder;
         padding: 29px 0 21px 35px;
+
+        @include breakpoint-mf ('xm') {
+            border: none;
+            background-color: transparent;
+            padding: 23px 20px 0 0;
+        }
+
+        @include breakpoint-mf ('sm') {
+            padding: 23px 47px 0 0;
+        }
+
+        @include breakpoint-mf ('ml') {
+            padding: 23px 65px 0 0;
+        }
+
+        @include breakpoint-mf ('mx') {
+            padding: 23px 90px 0 0;
+        }
+
+        @include breakpoint-mf('ms') {
+            padding: 0 48px 0 0;
+        }
     }
 
     &__nav-link {
-        position: relative;
         color: $mainColor;
         font-weight: 400;
         font-size: 26px;
         line-height: 26px;
 
+        @include breakpoint-mf ('xm') {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+            color: $secondColor;
+        }
+
+        @include breakpoint-mf ('ms') {
+            font-size: 16px;
+            line-height: 17px;
+        }
+
         &:hover::after {
-            // position: absolute;
-            // content: ('|');
-            // left: 0;
-            /* active */
-
-            // position: absolute;
-            // content: '';
-            // width: 8px;
-            // height: 53px;
-            // left: 3px;
-            // top: 19px;
-
-            // background: #8D81AC;
-
-            // color: $secondColor;
-
             position: absolute;
-            content: '';
-            top: calc(50% - 8px);
-            left: -55px;
-            transform: rotate(90deg);
-            width: 53px;
-            height: 8px;
+            content: "";
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            left: 2px;
+            width: 8px;
+            height: 53px;
             background-color: $secondColor;
+
+            @include breakpoint-mf ('xm') {
+                width: 0;
+                height: 0;
+            }
         }
 
         &:hover {
             color: $secondColor;
+
+            @include breakpoint-mf ('xm') {
+                color: $mainColor;
+            }
         }
     }
 
     &__btn {
-        display: block;
-        text-align: center;
+        display: flex;
+        justify-content: center;
         color: $mainColor;
         font-weight: 700;
         font-size: 15px;
@@ -115,6 +176,14 @@
         background-color: $secondColor;
         padding: 11px 10px;
         width: 119px;
+
+        @include breakpoint-mf ('xm') {
+            padding: 11px 20px;
+        }
+
+        @include breakpoint-mf('ms') {
+            order: 3;
+        }
 
         &:hover {
             background-color: $mainColor;
@@ -127,6 +196,11 @@
         background-color: $bgHeaderTell;
         width: 40px;
         height: 40px;
+
+        @include breakpoint-mf ('xm') {
+            display: none;
+        }
+
     }
 
     &__nav-line {
