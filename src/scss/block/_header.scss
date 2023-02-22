@@ -18,6 +18,12 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
+
+        @include breakpoint-mf ('ms') {
+            display: grid;
+            grid-template-columns: 130px 5fr 0fr;
+            justify-content: space-between;
+        }
     }
 
     &__logo-link {
@@ -71,6 +77,12 @@
     &__nav {
         @include breakpoint-mf ('xm') {
             margin: 0 auto;
+        }
+
+        @include breakpoint-mf ('ms') {
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
         }
     }
 
