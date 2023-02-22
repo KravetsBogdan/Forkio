@@ -11,6 +11,10 @@
       margin-bottom: 36px;
       margin-top: 32px;
 
+      &--desktop {
+         display: none;
+      }
+
       &::after {
          content: ">";
          margin-left: -7px;
@@ -101,27 +105,58 @@
    .get-section {
       &__title {
          max-width: 100%;
+         font-size: 42px;
+         line-height: 44px;
+      }
+
+      &__list-title {
+         margin-bottom: 0;
+         line-height: 21px;
+         text-align: left;
+      }
+
+      &__list-description {
+         font-family: 'Montserrat';
+         font-style: normal;
+         margin-bottom: 0px;
       }
 
       &__list-item {
          flex-direction: row;
          width: 100%;
+         margin-bottom: 60px;
+
+         &:last-child {
+            margin-bottom: 76px;
+         }
       }
+
+
 
       &__list-image--web {
          margin-right: 24px;
+         margin-bottom: 0px;
       }
 
       &__list-image--powerfull {
-         margin-right: 43px;
+         margin-right: 45px;
+         margin-bottom: 0px;
+
       }
 
       &__list-image--experiment {
-         margin-right: 58px;
+         margin-right: 60px;
+         margin-left: 15px;
+         margin-bottom: 0px;
+
       }
 
       &__list-image--webBetter {
-         margin-right: 52px;
+         margin-left: 10px;
+         margin-right: 54px;
+         margin-bottom: 0px;
+
+
       }
 
       &__list-title {
@@ -146,4 +181,51 @@
 
 }
 
-@media (min-width:993px) {}
+@media (min-width:993px) {
+   .get-section {
+      background-color: $bgSection;
+
+      &__wrap {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         max-width: 1200px;
+         margin: 0 auto;
+      }
+
+
+
+      &__list {
+         min-height: 665px;
+         margin-top: 100px;
+
+      }
+
+      &__title {
+         font-size: 48px;
+         line-height: 50px;
+         display: none;
+         text-align: left;
+
+         &--desktop {
+            display: block;
+            margin-bottom: 20px;
+            margin-top: 0;
+            margin-left: 20px;
+
+         }
+      }
+
+      &__example-photo-wrap {
+         flex-direction: column;
+         margin-left: 40px;
+         margin-bottom: 30px;
+
+         // justify-content: center;
+      }
+
+
+
+
+
+   }
+}

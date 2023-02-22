@@ -70,6 +70,9 @@ a {
   margin-bottom: 36px;
   margin-top: 32px;
 }
+.get-section__title--desktop {
+  display: none;
+}
 .get-section__title::after {
   content: ">";
   margin-left: -7px;
@@ -141,22 +144,44 @@ a {
 @media (min-width: 481px) {
   .get-section__title {
     max-width: 100%;
+    font-size: 42px;
+    line-height: 44px;
+  }
+  .get-section__list-title {
+    margin-bottom: 0;
+    line-height: 21px;
+    text-align: left;
+  }
+  .get-section__list-description, .get-section__list-description--last {
+    font-family: "Montserrat";
+    font-style: normal;
+    margin-bottom: 0px;
   }
   .get-section__list-item {
     flex-direction: row;
     width: 100%;
+    margin-bottom: 60px;
+  }
+  .get-section__list-item:last-child {
+    margin-bottom: 76px;
   }
   .get-section__list-image--web {
     margin-right: 24px;
+    margin-bottom: 0px;
   }
   .get-section__list-image--powerfull {
-    margin-right: 43px;
+    margin-right: 45px;
+    margin-bottom: 0px;
   }
   .get-section__list-image--experiment {
-    margin-right: 58px;
+    margin-right: 60px;
+    margin-left: 15px;
+    margin-bottom: 0px;
   }
   .get-section__list-image--webBetter {
-    margin-right: 52px;
+    margin-left: 10px;
+    margin-right: 54px;
+    margin-bottom: 0px;
   }
   .get-section__list-title {
     line-height: 21px;
@@ -170,6 +195,38 @@ a {
   }
   .get-section__example-photo-desktop {
     display: block;
+  }
+}
+@media (min-width: 993px) {
+  .get-section {
+    background-color: #F4F4F4;
+  }
+  .get-section__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .get-section__list {
+    min-height: 665px;
+    margin-top: 100px;
+  }
+  .get-section__title {
+    font-size: 48px;
+    line-height: 50px;
+    display: none;
+    text-align: left;
+  }
+  .get-section__title--desktop {
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 0;
+    margin-left: 20px;
+  }
+  .get-section__example-photo-wrap {
+    flex-direction: column;
+    margin-left: 40px;
+    margin-bottom: 30px;
   }
 }
 .footer {
