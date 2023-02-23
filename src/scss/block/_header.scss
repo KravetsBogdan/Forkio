@@ -131,11 +131,9 @@
             }
         }
 
-        &:hover>.header__nav-link {
-            color: $secondColor;
-
-            @include breakpoint-mf ('xm') {
-                color: $mainColor;
+        @include breakpoint ('xm') {
+            &:hover>.header__nav-link {
+                color: $secondColor;
             }
         }
 
@@ -167,6 +165,12 @@
         font-weight: 400;
         font-size: 26px;
         line-height: 26px;
+
+        &:hover {
+            @include breakpoint-mf ('xm') {
+                color: $mainColor;
+            }
+        }
 
         @include breakpoint-mf ('xm') {
             font-weight: 700;
