@@ -39,9 +39,12 @@
             color: $mainColor;
         }
 
+        &:hover>.header__logo {
+            display: none;
+        }
+
         &:hover>.header__logo--active {
-            opacity: 1;
-            // display: block;
+            display: block;
         }
 
         @include breakpoint-mf ('md') {
@@ -51,13 +54,8 @@
         }
     }
 
-    &__logo {
-        &--active {
-            opacity: 0;
-            // display: none;
-            position: absolute;
-            top: 32px;
-        }
+    &__logo--active {
+        display: none;
     }
 
     &__text-logo {
