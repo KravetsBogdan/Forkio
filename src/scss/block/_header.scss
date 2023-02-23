@@ -12,7 +12,6 @@
         padding: 30px 0;
     }
 
-
     &__container-flex {
         display: flex;
         flex-wrap: wrap;
@@ -85,21 +84,25 @@
     }
 
     &__nav-list {
-        display: none;
+        position: fixed;
+        transform: translateX(150%);
 
         @include breakpoint-mf('xm') {
+            position: static;
+            transform: translateX(0);
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
 
         &--active {
-            display: block;
-            position: absolute;
             z-index: 1;
-            top: 103px;
-            right: 5px;
-            width: 310px;
+            position: fixed;
+            transform: translateX(0);
+            top: 102px;
+            right: 0;
+            width: 292px;
+            transition: all ease-in-out 0.8s;
         }
     }
 
@@ -108,6 +111,31 @@
         background-color: $bgNavItem;
         border-bottom: 3px solid $bgNavBorder;
         padding: 29px 0 21px 35px;
+
+        &:hover::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            left: 2px;
+            width: 8px;
+            height: 53px;
+            background-color: $secondColor;
+
+            @include breakpoint-mf ('xm') {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        &:hover>.header__nav-link {
+            color: $secondColor;
+
+            @include breakpoint-mf ('xm') {
+                color: $mainColor;
+            }
+        }
 
         @include breakpoint-mf ('xm') {
             border: none;
@@ -148,31 +176,6 @@
         @include breakpoint-mf ('ms') {
             font-size: 16px;
             line-height: 17px;
-        }
-
-        &:hover::after {
-            position: absolute;
-            content: "";
-            top: 0;
-            bottom: 0;
-            margin: auto 0;
-            left: 2px;
-            width: 8px;
-            height: 53px;
-            background-color: $secondColor;
-
-            @include breakpoint-mf ('xm') {
-                width: 0;
-                height: 0;
-            }
-        }
-
-        &:hover {
-            color: $secondColor;
-
-            @include breakpoint-mf ('xm') {
-                color: $mainColor;
-            }
         }
     }
 
@@ -234,6 +237,7 @@
         }
 
         &::before {
+            @extend .header__nav-line;
             position: absolute;
             content: '';
             bottom: 9px;
@@ -241,7 +245,6 @@
             right: 0;
             transition: all ease-in-out 0.3s;
 
-            @extend .header__nav-line;
         }
 
         &--active {
@@ -260,11 +263,7 @@
             &::before {
                 display: none;
                 transition: all ease-in-out 0.3s;
-
             }
-
         }
     }
-
-
 }
