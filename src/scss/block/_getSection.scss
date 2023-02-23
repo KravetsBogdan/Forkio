@@ -1,0 +1,252 @@
+.get-section {
+
+   &__title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+      color: $secondColor;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-bottom: 36px;
+      margin-top: 32px;
+
+      &--desktop {
+         display: none;
+      }
+
+      &::after {
+         content: ">";
+         margin-left: -13px;
+      }
+
+      &::before {
+         content: "<";
+         margin-right: -13px;
+      }
+   }
+
+   &__list {
+      @include flexColumn;
+      position: relative;
+   }
+
+   &__list-item {
+      @include flexColumn;
+
+   }
+
+   &__list-image {
+      &--web {
+         margin-right: -35px;
+         margin-bottom: 27px;
+      }
+
+      &--powerfull {
+         margin-bottom: 21px;
+      }
+
+      &--experiment {
+         margin-bottom: 20px;
+
+      }
+
+      &--webBetter {
+         margin-bottom: 23px;
+
+      }
+
+   }
+
+   &__list-title {
+      color: $mainTitle;
+      font-size: 16px;
+      line-height: 16px;
+      text-align: center;
+      font-weight: 400;
+      margin-bottom: 14px;
+   }
+
+   &__list-description {
+      color: $mainText;
+      text-align: center;
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      max-width: 270px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+
+      &--last {
+         @extend .get-section__list-description;
+         margin-bottom: 64px;
+      }
+   }
+
+   &__example-photo-wrap {
+      display: flex;
+      justify-content: flex-end;
+   }
+
+   &__example-photo {
+      margin-bottom: 6px;
+
+   }
+
+   &__example-photo-desktop {
+      display: none;
+   }
+
+}
+
+@media (min-width:481px) {
+   .get-section {
+      &__title {
+         max-width: 100%;
+         font-size: 42px;
+         line-height: 44px;
+      }
+
+      &__list-title {
+         margin-bottom: 0;
+         line-height: 21px;
+         text-align: left;
+      }
+
+      &__list-description {
+         font-family: 'Montserrat';
+         font-style: normal;
+         margin-bottom: 0px;
+      }
+
+      &__list-item {
+         flex-direction: row;
+         width: 100%;
+         margin-bottom: 60px;
+
+         &:last-child {
+            margin-bottom: 76px;
+         }
+      }
+
+
+
+      &__list-image--web {
+         margin-right: 24px;
+         margin-bottom: 0px;
+      }
+
+      &__list-image--powerfull {
+         margin-right: 45px;
+         margin-bottom: 0px;
+
+      }
+
+      &__list-image--experiment {
+         margin-right: 60px;
+         margin-left: 15px;
+         margin-bottom: 0px;
+
+      }
+
+      &__list-image--webBetter {
+         margin-left: 10px;
+         margin-right: 54px;
+         margin-bottom: 0px;
+
+
+      }
+
+      &__list-title {
+         line-height: 21px;
+      }
+
+      &__list-description {
+         max-width: 100%;
+         text-align: left;
+      }
+
+
+      &__example-photo {
+         display: none;
+      }
+
+      &__example-photo-desktop {
+         display: block;
+      }
+   }
+
+
+}
+
+@media (min-width:993px) {
+   .get-section {
+      background-color: $bgSection;
+
+      .container {
+         padding-right: 0;
+      }
+
+      &__wrap {
+         display: flex;
+         max-width: 1200px;
+         margin: 0 auto;
+      }
+
+
+
+      &__list {
+         max-width: 540px;
+         margin-top: 100px;
+      }
+
+      &__list-item {
+         margin-bottom: 35px;
+
+         &:last-child {
+            margin-bottom: 70px;
+         }
+      }
+
+      &__list-title {
+         margin-bottom: 16px;
+      }
+
+      &__title {
+         font-size: 42px;
+         line-height: 50px;
+         display: none;
+         text-align: left;
+
+         &--desktop {
+            display: block;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-top: 0;
+
+
+         }
+      }
+
+      &__example-photo-wrap {
+         flex-direction: column;
+         margin-left: 40px;
+         margin-bottom: 30px;
+         margin-top: 95px;
+         justify-content: flex-start;
+      }
+
+
+
+
+
+   }
+}
+
+@media (min-width:1110px) {
+   .get-section__title--desktop {
+      font-size: 48px;
+   }
+}
