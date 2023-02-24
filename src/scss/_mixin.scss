@@ -41,3 +41,9 @@ $grid-breakpoints: (
   align-items: center;
   justify-content: center;
 }
+
+@mixin flexRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
