@@ -231,6 +231,7 @@ a {
 @media (min-width: 481px) {
   .header__nav-link:hover {
     color: #FFFFFF;
+    transition: color 0.5s ease;
   }
 }
 @media (min-width: 481px) {
@@ -273,6 +274,8 @@ a {
   background-color: #FFFFFF;
   color: #8D81AC;
   border: 1px solid #8D81AC;
+  transition: color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 .header__nav-btn {
   border: none;
@@ -420,6 +423,8 @@ a {
   background-color: #FFFFFF;
   color: #8D81AC;
   border: 2px solid #8D81AC;
+  transition: color 0.5s ease;
+  transition: background-color 1s ease;
 }
 .app-section__download-description {
   font-weight: 400;
