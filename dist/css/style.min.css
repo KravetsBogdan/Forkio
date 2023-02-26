@@ -629,7 +629,7 @@ a {
 @media (min-width: 481px) {
   .get-section__title {
     max-width: 100%;
-    font-size: 42px;
+    font-size: 37px;
     line-height: 44px;
   }
   .get-section__list-title {
@@ -680,6 +680,11 @@ a {
   }
   .get-section__example-photo-desktop {
     display: block;
+  }
+}
+@media (min-width: 536px) {
+  .get-section__title {
+    font-size: 42px;
   }
 }
 @media (min-width: 993px) {
