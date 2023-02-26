@@ -1,4 +1,4 @@
-.footer {
+.cards {
    background-image: url("../image/footer/layer_footer.png");
    background-size: cover;
    background-repeat: no-repeat;
@@ -24,7 +24,7 @@
       margin-bottom: 18px;
 
       &--agency {
-         @extend .footer__pricing-list-item;
+         @extend .cards__pricing-list-item;
          background-color: $cardActive;
          width: 300px;
       }
@@ -58,7 +58,7 @@
       margin-bottom: 20px;
 
       &--agency {
-         @extend .footer__pricing-cost;
+         @extend .cards__pricing-cost;
          font-size: 82px;
          line-height: 84px;
          margin-top: 14px;
@@ -93,7 +93,7 @@
 
    }
 
-   .footer__pricing-per-month--agency::after {
+   .cards__pricing-per-month--agency::after {
       margin-top: 46px;
       margin-bottom: 40px;
    }
@@ -106,22 +106,22 @@
       text-align: center;
 
       &--students {
-         @extend .footer__plan-benefits;
+         @extend .cards__plan-benefits;
 
       }
 
       &--prof {
-         @extend .footer__plan-benefits;
+         @extend .cards__plan-benefits;
          line-height: 28px;
       }
 
       &--agency {
-         @extend .footer__plan-benefits;
+         @extend .cards__plan-benefits;
          line-height: 32px;
       }
 
       &--enterprice {
-         @extend .footer__plan-benefits;
+         @extend .cards__plan-benefits;
          line-height: 28px;
          margin-bottom: 39px;
       }
@@ -139,19 +139,19 @@
       margin-bottom: 67px;
 
       &--prof {
-         @extend .footer__purchase;
+         @extend .cards__purchase;
          margin-bottom: 36px;
       }
 
       &--agency {
-         @extend .footer__purchase;
+         @extend .cards__purchase;
          margin-bottom: 47px;
          font-size: 16px;
          line-height: 18px;
       }
 
       &--enterprice {
-         @extend .footer__purchase;
+         @extend .cards__purchase;
          margin-bottom: 39px;
       }
    }
@@ -159,27 +159,29 @@
 
 
 @media (min-width:481px) {
-   .footer__pricing-title {
+   .cards__pricing-title {
       margin-bottom: 39px;
+      padding-top: 88px;
    }
 
-   .footer {
+   .cards {
       &__pricing-list {
          flex-direction: row;
          flex-wrap: wrap;
          column-gap: 25px;
+         row-gap: 30px;
          margin: 0 auto;
          max-width: 480px;
-         padding-bottom: 64px;
+         padding-bottom: 94px;
       }
 
       &__pricing-list-item {
-         max-width: 205px;
-         margin-bottom: 30px;
+         max-width: 200px;
+         margin-bottom: 0px;
 
          &--agency {
-            min-width: 230px;
-            margin-left: -25px;
+            min-width: 220px;
+            margin-left: -20px;
 
 
          }
@@ -214,11 +216,12 @@
 }
 
 @media (min-width:993px) {
-   .footer__pricing-title {
+   .cards__pricing-title {
       margin-bottom: 61px;
+      padding-top: 114px;
    }
 
-   .footer {
+   .cards {
       &__pricing-list {
          flex-direction: row;
          flex-wrap: wrap;
@@ -226,7 +229,7 @@
          margin: 0 auto;
          max-width: 100%;
          gap: 15px;
-         padding-bottom: 54px;
+         padding-bottom: 80px;
 
       }
 
@@ -244,7 +247,7 @@
 }
 
 @media (min-width:1200px) {
-   .footer {
+   .cards {
       &__pricing-list {
          flex-direction: row;
          flex-wrap: wrap;

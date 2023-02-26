@@ -37,6 +37,7 @@
 
         &:hover>.header__text-logo {
             color: $mainColor;
+
         }
 
         &:hover>.header__logo {
@@ -169,6 +170,9 @@
         &:hover {
             @include breakpoint-mf ('xm') {
                 color: $mainColor;
+                transition: color .5s ease;
+
+
             }
         }
 
@@ -209,6 +213,9 @@
             background-color: $mainColor;
             color: $secondColor;
             border: 1px solid $secondColor;
+            transition: color .5s ease;
+            transition: background-color .5s ease;
+
         }
     }
 

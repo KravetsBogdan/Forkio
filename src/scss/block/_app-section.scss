@@ -93,6 +93,9 @@
             background-color: $mainColor;
             color: $secondColor;
             border: 2px solid $secondColor;
+            transition: color .5s ease;
+            transition: background-color 1s ease;
+
         }
     }
 
