@@ -59,12 +59,12 @@ a {
   text-decoration: none;
 }
 
-.footer {
+.cards {
   background-image: url("../image/footer/layer_footer.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.footer__pricing-title {
+.cards__pricing-title {
   text-align: center;
   color: #FFFFFF;
   font-weight: 700;
@@ -73,13 +73,13 @@ a {
   margin-bottom: 32px;
   padding-top: 14px;
 }
-.footer__pricing-list {
+.cards__pricing-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.footer__pricing-list-item, .footer__pricing-list-item--agency {
+.cards__pricing-list-item, .cards__pricing-list-item--agency {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,11 +87,11 @@ a {
   background-color: #5f5161;
   margin-bottom: 18px;
 }
-.footer__pricing-list-item--agency {
+.cards__pricing-list-item--agency {
   background-color: rgba(70, 48, 72, 0.84);
   width: 300px;
 }
-.footer__pricing-name {
+.cards__pricing-name {
   width: 100%;
   text-align: center;
   color: #FFFFFF;
@@ -102,10 +102,10 @@ a {
   font-size: 24px;
   line-height: 24px;
 }
-.footer__pricing-name--agency {
+.cards__pricing-name--agency {
   background-color: rgba(0, 0, 0, 0.11);
 }
-.footer__pricing-cost, .footer__pricing-cost--agency {
+.cards__pricing-cost, .cards__pricing-cost--agency {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 60px;
@@ -113,24 +113,24 @@ a {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-.footer__pricing-cost--agency {
+.cards__pricing-cost--agency {
   font-size: 82px;
   line-height: 84px;
   margin-top: 14px;
   margin-bottom: 16px;
 }
-.footer__pricing-cost::before, .footer__pricing-cost--agency::before {
+.cards__pricing-cost::before, .cards__pricing-cost--agency::before {
   content: "$";
   font-weight: 400;
   margin-right: -15px;
 }
-.footer__pricing-per-month {
+.cards__pricing-per-month {
   color: #FFFFFF;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
 }
-.footer__pricing-per-month::after {
+.cards__pricing-per-month::after {
   content: "";
   display: block;
   width: 60px;
@@ -141,28 +141,28 @@ a {
   margin-left: 99px;
   margin-right: 99px;
 }
-.footer .footer__pricing-per-month--agency::after {
+.cards .cards__pricing-per-month--agency::after {
   margin-top: 46px;
   margin-bottom: 40px;
 }
-.footer__plan-benefits, .footer__plan-benefits--enterprice, .footer__plan-benefits--agency, .footer__plan-benefits--prof, .footer__plan-benefits--students {
+.cards__plan-benefits, .cards__plan-benefits--enterprice, .cards__plan-benefits--agency, .cards__plan-benefits--prof, .cards__plan-benefits--students {
   color: #FFFFFF;
   font-size: 16px;
   line-height: 18px;
   margin-bottom: 37px;
   text-align: center;
 }
-.footer__plan-benefits--prof {
+.cards__plan-benefits--prof {
   line-height: 28px;
 }
-.footer__plan-benefits--agency {
+.cards__plan-benefits--agency {
   line-height: 32px;
 }
-.footer__plan-benefits--enterprice {
+.cards__plan-benefits--enterprice {
   line-height: 28px;
   margin-bottom: 39px;
 }
-.footer__purchase, .footer__purchase--enterprice, .footer__purchase--agency, .footer__purchase--prof {
+.cards__purchase, .cards__purchase--enterprice, .cards__purchase--agency, .cards__purchase--prof {
   color: #FFFFFF;
   font-size: 15px;
   line-height: 15px;
@@ -171,87 +171,88 @@ a {
   border-radius: 40px;
   margin-bottom: 67px;
 }
-.footer__purchase--prof {
+.cards__purchase--prof {
   margin-bottom: 36px;
 }
-.footer__purchase--agency {
+.cards__purchase--agency {
   margin-bottom: 47px;
   font-size: 16px;
   line-height: 18px;
 }
-.footer__purchase--enterprice {
+.cards__purchase--enterprice {
   margin-bottom: 39px;
 }
 
 @media (min-width: 481px) {
-  .footer__pricing-title {
+  .cards__pricing-title {
     margin-bottom: 39px;
   }
-  .footer__pricing-list {
+  .cards__pricing-list {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 25px;
+    row-gap: 30px;
     margin: 0 auto;
     max-width: 480px;
-    padding-bottom: 64px;
+    padding-bottom: 94px;
   }
-  .footer__pricing-list-item, .footer__pricing-list-item--agency {
+  .cards__pricing-list-item, .cards__pricing-list-item--agency {
     max-width: 205px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
-  .footer__pricing-list-item--agency {
+  .cards__pricing-list-item--agency {
     min-width: 230px;
     margin-left: -25px;
   }
-  .footer__plan-benefits--students {
+  .cards__plan-benefits--students {
     margin-bottom: 68px;
   }
-  .footer__plan-benefits--agency {
+  .cards__plan-benefits--agency {
     margin-bottom: 83px;
   }
-  .footer__plan-benefits--prof {
+  .cards__plan-benefits--prof {
     margin-bottom: 30px;
   }
-  .footer__plan-benefits--enterprice {
+  .cards__plan-benefits--enterprice {
     margin-bottom: 30px;
   }
-  .footer__purchase, .footer__purchase--prof, .footer__purchase--agency, .footer__purchase--enterprice {
+  .cards__purchase, .cards__purchase--prof, .cards__purchase--agency, .cards__purchase--enterprice {
     margin-bottom: 36px;
   }
 }
 @media (min-width: 993px) {
-  .footer__pricing-title {
+  .cards__pricing-title {
     margin-bottom: 61px;
   }
-  .footer__pricing-list {
+  .cards__pricing-list {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 25px;
     margin: 0 auto;
     max-width: 100%;
     gap: 15px;
-    padding-bottom: 54px;
+    padding-bottom: 80px;
   }
-  .footer__pricing-list-item, .footer__pricing-list-item--agency {
+  .cards__pricing-list-item, .cards__pricing-list-item--agency {
     max-width: 220px;
   }
-  .footer__pricing-list-item--agency {
+  .cards__pricing-list-item--agency {
     min-width: 255px;
     margin-left: 0;
   }
 }
 @media (min-width: 1200px) {
-  .footer__pricing-list {
+  .cards__pricing-list {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 25px;
     margin: 0 auto;
     width: 1200px;
   }
-  .footer__pricing-list-item, .footer__pricing-list-item--agency {
+  .cards__pricing-list-item, .cards__pricing-list-item--agency {
     min-width: 258px;
   }
-  .footer__pricing-list-item--agency {
+  .cards__pricing-list-item--agency {
     min-width: 300px;
   }
 }
