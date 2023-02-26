@@ -160,7 +160,6 @@
 
 @media (min-width:481px) {
    .cards__pricing-title {
-      padding-top: 88px;
       margin-bottom: 39px;
    }
 
@@ -176,12 +175,12 @@
       }
 
       &__pricing-list-item {
-         max-width: 205px;
+         max-width: 200px;
          margin-bottom: 0px;
 
          &--agency {
-            min-width: 230px;
-            margin-left: -25px;
+            min-width: 220px;
+            margin-left: -20px;
 
 
          }
@@ -218,8 +217,6 @@
 @media (min-width:993px) {
    .cards__pricing-title {
       margin-bottom: 61px;
-      padding-top: 112px;
-
    }
 
    .cards {
