@@ -872,6 +872,7 @@ a {
 @media (min-width: 481px) {
   .cards__pricing-title {
     margin-bottom: 39px;
+    padding-top: 88px;
   }
   .cards__pricing-list {
     flex-direction: row;
@@ -909,6 +910,7 @@ a {
 @media (min-width: 993px) {
   .cards__pricing-title {
     margin-bottom: 61px;
+    padding-top: 114px;
   }
   .cards__pricing-list {
     flex-direction: row;
