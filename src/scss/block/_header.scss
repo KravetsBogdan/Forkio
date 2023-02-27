@@ -88,11 +88,11 @@
 
     &__nav-list {
         position: fixed;
-        transform: translateX(150%);
+        transform: translateY(-150%);
 
         @include breakpoint-mf('xm') {
             position: static;
-            transform: translateX(0);
+            transform: translateY(0);
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -100,7 +100,7 @@
 
         &--active {
             z-index: 1;
-            position: fixed;
+            position: absolute;
             transform: translateX(0);
             top: 102px;
             right: 0;
