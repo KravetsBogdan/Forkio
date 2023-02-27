@@ -215,6 +215,44 @@
    }
 }
 
+@media (min-width:550px) {
+   .cards__pricing-list {
+      max-width: 520px;
+   }
+
+   .cards__pricing-list-item {
+      min-width: 225px;
+   }
+
+   .cards__pricing-list-item--agency {
+      min-width: 250px;
+      margin-left: -20px;
+   }
+}
+
+@media (min-width:700px) {
+   .cards__pricing-list {
+      max-width: 680px;
+   }
+
+   .cards__pricing-list-item {
+      min-width: 255px;
+   }
+
+   .cards__pricing-list-item--agency {
+      min-width: 280px;
+   }
+}
+
+@media (min-width:768px) {
+
+
+   .cards__pricing-list-item--agency {
+      min-width: 300px;
+      margin-left: -40px;
+   }
+}
+
 @media (min-width:993px) {
    .cards__pricing-title {
       margin-bottom: 61px;
