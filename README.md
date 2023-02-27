@@ -15,6 +15,8 @@
 Зверстав секцію Here is what you get.
 Зверстав секцію Fork Subscription Pricing.
 
-Кравець Богдан - 
+4. Кравець Богдан - 
 Зверстав header
 Зверстав секцію People Are Talking About Fork
+
+5. https://kravetsbogdan.github.io/Forkio/
