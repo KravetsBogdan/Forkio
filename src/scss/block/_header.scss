@@ -87,7 +87,7 @@
     }
 
     &__nav-list {
-        position: fixed;
+        position: absolute;
         transform: translateY(-150%);
 
         @include breakpoint-mf('xm') {
