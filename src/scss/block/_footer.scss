@@ -162,6 +162,8 @@
    .cards__pricing-title {
       margin-bottom: 39px;
       padding-top: 88px;
+      font-size: 42px;
+      line-height: 44px;
    }
 
    .cards {
@@ -216,6 +218,8 @@
 }
 
 @media (min-width:550px) {
+
+
    .cards__pricing-list {
       max-width: 520px;
    }
@@ -257,6 +261,9 @@
    .cards__pricing-title {
       margin-bottom: 61px;
       padding-top: 114px;
+      font-size: 48px;
+      line-height: 50px;
+
    }
 
    .cards {
