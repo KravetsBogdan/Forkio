@@ -2,13 +2,23 @@ import * as flsFunctions from './modules/functions.js';
 
 flsFunctions.isWebp();
 
+
 function nav() {
     let btn = document.querySelector('.header__nav-btn');
-    btn.addEventListener('click', () => {
-        let nav = document.querySelector('.header__nav-list');
-        nav.classList.toggle('header__nav-list--active');
-        let line = document.querySelector('.header__nav-line');
-        line.classList.toggle('header__nav-line--active');
+    let nav = document.querySelector('.header__nav-list');
+    let spanBtn = document.querySelector('.header__nav-line');
+
+    document.addEventListener('click', (event) => {
+        console.log(event.target);
+        if (event.target === btn || event.target === spanBtn) {
+            nav.classList.toggle('header__nav-list--active');
+            spanBtn.classList.toggle('header__nav-line--active')
+        }
+        else {
+            nav.classList.remove('header__nav-list--active')
+            spanBtn.classList.remove('header__nav-line--active')
+        }
+
     })
 }
 nav();
